@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checagem do debate da Globo · 2º turno 2026</title>
+<meta name="description" content="150 afirmações de Flávio Bolsonaro e Lula no debate da TV Globo de 23/10/2026, checadas uma a uma, com o método explicado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --verde:#009B3A; --verde-escuro:#00692A;
+  --amarelo:#FEDF00; --amarelo-escuro:#8A6D00;
+  --azul:#002776; --azul-claro:#E8EDF8;
+  --tinta:#0B1A33; --tinta-2:#4A5568;
+  --nevoa:#D9DEE6; --linha:#E3E7ED;
+  --papel:#FFFFFF; --fundo:#F5F7FA;
+  --display:'Archivo', 'Arial Narrow', sans-serif;
+  --corpo:'Atkinson Hyperlegible', system-ui, sans-serif;
+  --mono:'IBM Plex Mono', ui-monospace, monospace;
+  --raio:10px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--corpo);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--azul);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--amarelo);outline-offset:2px;box-shadow:0 0 0 5px var(--azul)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+@media (max-width:600px){.wrap{padding:0 16px}}
+
+/* faixa da bandeira no topo */
+.flagline{display:grid;grid-template-columns:3fr 2fr 1fr;height:6px}
+.flagline i:nth-child(1){background:var(--verde)}.flagline i:nth-child(2){background:var(--amarelo)}.flagline i:nth-child(3){background:var(--azul)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
+.nav .wrap{display:flex;align-items:center;gap:24px;height:56px}
+.nav .brand{font-family:var(--display);font-stretch:125%;font-weight:800;font-size:15px;letter-spacing:.02em;text-transform:uppercase;color:var(--azul);text-decoration:none;white-space:nowrap}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a.lk{display:block;padding:6px 12px;border-radius:999px;font-size:14px;color:var(--tinta-2);text-decoration:none;white-space:nowrap}
+.nav a.lk:hover{background:var(--fundo);color:var(--tinta)}
+@media (max-width:720px){.nav .brand{display:none}.nav ul{margin:0}}
+
+/* hero */
+.hero{padding:64px 0 40px}
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--tinta-2);margin:0 0 18px}
+.hero h1{font-family:var(--display);font-stretch:125%;font-weight:850;font-size:clamp(34px,6vw,76px);line-height:.95;letter-spacing:-.01em;margin:0;max-width:20ch;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--verde)}
+.hero .lead{max-width:60ch;font-size:19px;margin:28px 0 0;color:var(--tinta)}
+.hero .lead b{font-family:var(--mono);font-weight:600;font-size:.92em}
+
+/* faixas: assinatura */
+.faixas{margin:48px 0 0;display:grid;gap:28px}
+.faixa-cab{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:10px}
+.faixa-cab h2{font-family:var(--display);font-stretch:112%;font-weight:750;font-size:clamp(20px,2.6vw,28px);margin:0;letter-spacing:-.005em}
+.faixa-cab span{font-family:var(--mono);font-size:14px;color:var(--tinta-2);white-space:nowrap}
+.faixa{display:flex;height:clamp(64px,9vw,104px);border-radius:var(--raio);overflow:hidden;gap:3px;position:relative}
+.seg{position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:10px 12px;min-width:0;overflow:hidden;transform-origin:left center;cursor:default}
+.seg .n{font-family:var(--display);font-stretch:125%;font-weight:850;font-size:clamp(22px,3.6vw,40px);line-height:1}
+.seg .p{font-family:var(--mono);font-size:13px;opacity:.9}
+.seg.fato{background:var(--verde);color:#fff}
+.seg.imp{background:var(--amarelo);color:var(--tinta)}
+.seg.fake{background:var(--azul);color:#fff}
+.seg.nv{background:var(--nevoa);color:var(--tinta)}
+.seg.compact .p{display:none}.seg.tight .n,.seg.tight .p{display:none}
+@media (prefers-reduced-motion: no-preference){
+  .faixa .seg{animation:crescer .9s cubic-bezier(.2,.8,.2,1) both}
+  .faixa .seg:nth-child(2){animation-delay:.08s}.faixa .seg:nth-child(3){animation-delay:.16s}.faixa .seg:nth-child(4){animation-delay:.24s}
+  @keyframes crescer{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+}
+.legenda{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:15px}
+.legenda span{display:inline-flex;align-items:center;gap:8px}
+.sw{width:14px;height:14px;border-radius:3px;display:inline-block;flex:none}
+.sw.fato{background:var(--verde)}.sw.imp{background:var(--amarelo);box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}.sw.fake{background:var(--azul)}.sw.nv{background:var(--nevoa)}
+.legenda small{color:var(--tinta-2)}
+.tip{position:absolute;z-index:5;pointer-events:none;background:var(--tinta);color:#fff;font-size:13px;padding:6px 10px;border-radius:6px;white-space:nowrap;font-family:var(--mono)}
+
+/* seções */
+section.bloco{padding:72px 0;border-top:1px solid var(--linha)}
+section.alt{background:var(--fundo)}
+.sec-cab{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin-bottom:32px;max-width:72ch}
+.sec-cab h2{font-family:var(--display);font-stretch:118%;font-weight:800;font-size:clamp(28px,4vw,46px);line-height:1;margin:0;letter-spacing:-.01em}
+.sec-cab p{margin:0;color:var(--tinta-2);font-size:18px}
+
+/* explorador */
+.ctrl{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-bottom:16px}
+.chips{display:inline-flex;flex-wrap:wrap;gap:6px}
+.chip{font:inherit;font-size:14px;padding:7px 14px;border-radius:999px;border:1.5px solid var(--nevoa);background:var(--papel);color:var(--tinta);cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+.chip:hover{border-color:var(--tinta-2)}
+.chip[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:#fff}
+.ctrl select,.ctrl input[type=search]{font:inherit;font-size:14px;padding:8px 12px;border:1.5px solid var(--nevoa);border-radius:8px;background:var(--papel);color:var(--tinta)}
+.ctrl input[type=search]{flex:1 1 220px;min-width:0}
+.ctrl label.ck{display:inline-flex;align-items:center;gap:8px;font-size:14px;cursor:pointer}
+.ctrl label.ck input{width:18px;height:18px;accent-color:var(--azul)}
+.contagem{font-family:var(--mono);font-size:13px;color:var(--tinta-2);margin:0 0 12px}
+.lista{display:grid;gap:10px}
+.item{background:var(--papel);border:1px solid var(--linha);border-radius:var(--raio);padding:16px 18px 16px 22px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 18px;position:relative;overflow:hidden}
+.item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--nevoa)}
+.item.fato::before{background:var(--verde)}.item.imp::before{background:var(--amarelo)}.item.fake::before{background:var(--azul)}
+.item .meta{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px 14px;font-family:var(--mono);font-size:12px;color:var(--tinta-2);text-transform:uppercase;letter-spacing:.04em}
+.item .meta .cand{color:var(--tinta);font-weight:600}
+.item .meta .div{color:var(--azul);font-weight:600}
+.item .afirm{font-size:18px;font-weight:700;line-height:1.35;margin:0}
+.item .selo{align-self:start;justify-self:end;font-family:var(--display);font-stretch:112%;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.04em;padding:5px 10px;border-radius:6px;white-space:nowrap}
+.selo.fato{background:var(--verde);color:#fff}.selo.imp{background:var(--amarelo);color:var(--tinta)}.selo.fake{background:var(--azul);color:#fff}.selo.nv{background:var(--nevoa);color:var(--tinta)}
+.item .porque{grid-column:1/-1;margin:2px 0 0;color:var(--tinta)}
+.item .apoio{grid-column:1/-1;margin:0;font-size:14px;color:var(--tinta-2)}
+.vazio{padding:32px;text-align:center;border:1.5px dashed var(--nevoa);border-radius:var(--raio);color:var(--tinta-2)}
+.vazio button{margin-top:10px}
+@media (max-width:600px){.item{grid-template-columns:1fr}.item .selo{justify-self:start}}
+
+/* método */
+.metodo{display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px}
+.metodo aside{position:sticky;top:80px;align-self:start}
+.metodo aside ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;border-left:2px solid var(--nevoa)}
+.metodo aside a{display:block;padding:6px 14px;margin-left:-2px;border-left:2px solid transparent;font-size:15px;color:var(--tinta-2);text-decoration:none}
+.metodo aside a:hover{color:var(--tinta);border-left-color:var(--azul)}
+@media (max-width:900px){.metodo{grid-template-columns:1fr;gap:0}.metodo aside{display:none}}
+.art{max-width:74ch}
+.art h3{font-family:var(--display);font-stretch:112%;font-weight:780;font-size:clamp(22px,2.6vw,28px);line-height:1.1;margin:48px 0 12px;scroll-margin-top:80px}
+.art h3:first-child{margin-top:0}
+.art p{margin:0 0 14px}
+.art ol,.art ul{margin:0 0 14px;padding-left:22px}
+.art li{margin-bottom:8px}
+.tbl{width:100%;overflow-x:auto;margin:8px 0 18px;border:1px solid var(--linha);border-radius:var(--raio);background:var(--papel)}
+.tbl table{width:100%;border-collapse:collapse;font-size:15px;min-width:560px}
+.tbl th{text-align:left;font-family:var(--mono);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--tinta-2);padding:12px 14px;border-bottom:2px solid var(--linha);background:var(--fundo)}
+.tbl td{padding:12px 14px;border-bottom:1px solid var(--linha);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td .selo{display:inline-block;font-family:var(--display);font-stretch:112%;font-weight:800;font-size:12px;text-transform:uppercase;padding:3px 8px;border-radius:5px}
+.nota{border-left:6px solid var(--amarelo);background:#FFFBE0;padding:14px 18px;border-radius:0 var(--raio) var(--raio) 0;margin:18px 0}
+.nota p:last-child{margin-bottom:0}
+
+/* fontes / rodapé */
+.fontes{columns:2 320px;column-gap:40px;padding:0;margin:0;list-style:none}
+.fontes li{break-inside:avoid;padding:8px 0;border-bottom:1px solid var(--linha);font-size:15px}
+footer{background:var(--azul);color:#fff;padding:40px 0 48px}
+footer p{margin:0 0 8px;max-width:70ch;color:#D5DEF2;font-size:15px}
+footer b{color:#fff}
+footer a{color:var(--amarelo)}
+</style>
+</head>
+<body>
+<div class="flagline" aria-hidden="true"><i></i><i></i><i></i></div>
+<nav class="nav" aria-label="Seções">
+  <div class="wrap">
+    <a class="brand" href="#topo">Checagem · Debate Globo</a>
+    <ul>
+      <li><a class="lk" href="#placar">Placar</a></li>
+      <li><a class="lk" href="#afirmacoes">Afirmações</a></li>
+      <li><a class="lk" href="#metodo">Como foi feito</a></li>
+      <li><a class="lk" href="#limites">Limites</a></li>
+      <li><a class="lk" href="#fontes">Fontes</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="topo">
+  <header class="hero" id="placar">
+    <div class="wrap">
+      <p class="eyebrow">Debate do 2º turno · TV Globo · 23 de outubro de 2026</p>
+      <h1>Cada afirmação, <em>checada</em> uma a uma</h1>
+      <p class="lead" id="lead"></p>
+
+      <div class="faixas" id="faixas"></div>
+      <div class="legenda" aria-label="Legenda dos selos">
+        <span><i class="sw fato"></i>Fato <small>confere com a fonte</small></span>
+        <span><i class="sw imp"></i>Impreciso <small>correto em parte</small></span>
+        <span><i class="sw fake"></i>Fake <small>falso, enganoso ou sem prova</small></span>
+        <span><i class="sw nv"></i>Não verificável <small>sem dado público</small></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="bloco alt" id="afirmacoes">
+    <div class="wrap">
+      <div class="sec-cab">
+        <h2>Todas as afirmações</h2>
+        <p>Filtre por candidato, selo ou bloco do debate, ou busque um tema. Cada item traz o motivo do selo e em que checagens ele se apoia.</p>
+      </div>
+      <div class="ctrl">
+        <div class="chips" role="group" aria-label="Candidato" id="f-cand">
+          <button class="chip" data-v="todos" aria-pressed="true">Os dois</button>
+          <button class="chip" data-v="Flávio Bolsonaro" aria-pressed="false">Flávio</button>
+          <button class="chip" data-v="Lula" aria-pressed="false">Lula</button>
+        </div>
+        <div class="chips" role="group" aria-label="Selo" id="f-selo">
+          <button class="chip" data-v="todos" aria-pressed="true">Todos os selos</button>
+          <button class="chip" data-v="Fato" aria-pressed="false"><i class="sw fato"></i>Fato</button>
+          <button class="chip" data-v="Impreciso" aria-pressed="false"><i class="sw imp"></i>Impreciso</button>
+          <button class="chip" data-v="Fake" aria-pressed="false"><i class="sw fake"></i>Fake</button>
+          <button class="chip" data-v="Não verificável" aria-pressed="false"><i class="sw nv"></i>Não verificável</button>
+        </div>
+      </div>
+      <div class="ctrl">
+        <select id="f-bloco" aria-label="Bloco do debate"></select>
+        <label class="ck"><input type="checkbox" id="f-div"> Só onde os checadores divergiram</label>
+        <input type="search" id="f-q" placeholder="Buscar: SUS, juros, Tigrinho, transposição…" aria-label="Buscar afirmações">
+      </div>
+      <p class="contagem" id="contagem" aria-live="polite"></p>
+      <div class="lista" id="lista"></div>
+    </div>
+  </section>
+
+  <section class="bloco" id="metodo">
+    <div class="wrap">
+      <div class="sec-cab">
+        <h2>Como foi feito</h2>
+        <p>De onde vieram as falas, como cada uma foi classificada e por que este placar difere do dos veículos.</p>
+      </div>
+      <div class="metodo">
+        <aside aria-label="Nesta seção">
+          <ol>
+            <li><a href="#m-origem">De onde vieram as falas</a></li>
+            <li><a href="#m-criterio">O que entrou</a></li>
+            <li><a href="#m-escala">A escala de selos</a></li>
+            <li><a href="#m-checagem">Como foi checado</a></li>
+            <li><a href="#m-resultado">O que o resultado mostra</a></li>
+            <li><a href="#m-divergencias">Divergências</a></li>
+            <li><a href="#m-veiculos">Diferença dos veículos</a></li>
+            <li><a href="#limites">Limites</a></li>
+          </ol>
+        </aside>
+        <div class="art">
+          <h3 id="m-origem">De onde vieram as falas</h3>
+          <p>A base é a <a href="https://www.poder360.com.br/poder-eleicoes-2026/leia-a-integra-do-ultimo-debate-entre-lula-e-flavio-na-globo/" target="_blank" rel="noopener">transcrição do debate publicada pelo Poder360</a>. Cada bloco foi lido em ordem de fala, listando toda afirmação com número, data, votação, lei ou fato atribuído.</p>
+          <div class="tbl"><table>
+            <thead><tr><th>Bloco</th><th>Conteúdo</th><th>Cobertura</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Regiões do país, infraestrutura e exportações</td><td>Completa, pela transcrição</td></tr>
+              <tr><td>2</td><td>Políticas sociais, dívida pública e SUS</td><td>Completa, pela transcrição</td></tr>
+              <tr><td>3</td><td>Endividamento, ensino integral e segurança</td><td>Completa, pela transcrição</td></tr>
+              <tr><td>4</td><td>Tema livre e considerações finais</td><td>Parcial: só o que os checadores publicaram</td></tr>
+            </tbody>
+          </table></div>
+          <p>A leitura da transcrição parou no começo do bloco 4. As falas desse bloco vieram das checagens publicadas, então ele pode ter lacunas.</p>
+
+          <h3 id="m-criterio">O que entrou e o que ficou de fora</h3>
+          <p>Entrou toda afirmação que pode ser confirmada ou desmentida com dados públicos. Ficou de fora o que não tem como ser verdadeiro ou falso.</p>
+          <div class="tbl"><table>
+            <thead><tr><th>Entrou</th><th>Ficou de fora</th></tr></thead>
+            <tbody>
+              <tr><td>Números e estatísticas</td><td>Opiniões (“o PT fez mais inclusão que todos juntos”)</td></tr>
+              <tr><td>Votações e autoria de leis</td><td>Promessas (“vou criar o Banco da Prosperidade”)</td></tr>
+              <tr><td>Fatos históricos e datas</td><td>Ataques e adjetivos</td></tr>
+              <tr><td>Citações atribuídas a alguém</td><td>Posições pessoais (“sou a favor da tarifa zero”)</td></tr>
+            </tbody>
+          </table></div>
+          <p>Uma promessa que embute um fato entrou pelo fato: “vou criar a Casa da Mulher Brasileira” foi checada porque o programa já existe.</p>
+
+          <h3 id="m-escala">A escala de selos</h3>
+          <p>Cada veículo usa a própria escala. Para comparar os dois candidatos, tudo foi convertido em quatro selos.</p>
+          <div class="tbl"><table>
+            <thead><tr><th>Selo</th><th>Quando foi usado</th><th>Equivale, nos veículos, a</th></tr></thead>
+            <tbody>
+              <tr><td><span class="selo fato">Fato</span></td><td>O número ou o fato confere com a fonte oficial</td><td>Fato, Verdadeiro</td></tr>
+              <tr><td><span class="selo imp">Impreciso</span></td><td>Correto em parte, exagerado, subestimado ou sem o contexto que muda o sentido</td><td>Não é bem assim, Falta contexto, Exagerado, Subestimado</td></tr>
+              <tr><td><span class="selo fake">Fake</span></td><td>Falso, enganoso ou sem prova que sustente</td><td>Fake, Falso, Enganoso, Insustentável, Distorcido</td></tr>
+              <tr><td><span class="selo nv">Não verificável</span></td><td>Não há dado público para confirmar nem desmentir</td><td>—</td></tr>
+            </tbody>
+          </table></div>
+          <p>Um número arredondado que não muda a conclusão ficou como Fato. Um erro que muda a conclusão virou Impreciso ou Fake.</p>
+
+          <h3 id="m-checagem">Como cada afirmação foi checada</h3>
+          <ol>
+            <li><b>Checagens dos veículos:</b> g1 (Fato ou Fake), Agência Lupa (publicada pela Folha), UOL Confere, Aos Fatos (com o Terra), Verifique a Verdade e Ranking dos Políticos.</li>
+            <li><b>Dados oficiais:</b> TCU, IBGE, Banco Central, ministérios, leis e registros de votação, usados para desempatar e para falas que ninguém checou.</li>
+            <li><b>Buscas próprias:</b> para cerca de 15 afirmações sem checagem publicada, como a escala 6x1, o fim das bets, a Lei Antifacção e a fila das creches.</li>
+          </ol>
+          <div class="nota"><p><b>Quando os checadores discordam:</b> pesa primeiro o dado oficial citado por eles, depois o que a frase diz literalmente. O mesmo critério vale para os dois candidatos: número subestimado ou crédito por obra herdada virou Impreciso para ambos.</p></div>
+
+          <h3 id="m-resultado">O que o resultado mostra</h3>
+          <p id="m-resultado-txt"></p>
+          <p>Nas falsas de Flávio, os temas se espalham: saúde, segurança e política, com casos como a Casa da Mulher Brasileira e o filme Dark Horse. Nas de Lula, boa parte veio de infraestrutura, com números da transposição e da obra da Serra das Araras. Nos dois, as imprecisões vieram sobretudo de economia e infraestrutura: crédito por obras e programas de outros governos e números arredondados para cima.</p>
+
+          <h3 id="m-divergencias">Onde os checadores divergiram</h3>
+          <p id="m-div-txt"></p>
+          <div class="tbl"><table>
+            <thead><tr><th>Afirmação</th><th>O que os veículos disseram</th><th>Selo final</th><th>Por quê</th></tr></thead>
+            <tbody>
+              <tr><td>Flávio: TCU aponta mais de 11,5 mil obras paradas no atual governo</td><td>g1 e UOL: falso · Lupa: falta contexto · Verifique a Verdade: verdadeiro</td><td><span class="selo imp">Impreciso</span></td><td>O número existe num relatório do TCU, mas soma obras de vários governos; o painel atual mostra 4.215</td></tr>
+              <tr><td>Flávio: Lula é o “pai do Tigrinho”</td><td>Lupa e Aos Fatos: falso · UOL: enganoso · g1: não é bem assim</td><td><span class="selo imp">Impreciso</span></td><td>As apostas são de 2018 (Temer), mas a lei de 2023 sancionada por Lula incluiu os jogos on-line</td></tr>
+              <tr><td>Flávio: Bolsonaro elevou o Bolsa Família a no mínimo R$ 600</td><td>UOL e Aos Fatos: enganoso · g1: não é bem assim · Lupa: exagerado</td><td><span class="selo imp">Impreciso</span></td><td>Bolsonaro fixou R$ 400; os R$ 200 a mais vieram do Congresso, por prazo limitado</td></tr>
+              <tr><td>Flávio: Bolsonaro não debochou de quem tinha falta de ar</td><td>g1, Lupa e Aos Fatos: falso · Verifique a Verdade: verdadeiro</td><td><span class="selo fake">Fake</span></td><td>O vídeo exibido estava cortado e a vacinação já tinha começado</td></tr>
+              <tr><td>Lula: herdou 6 mil obras paradas</td><td>g1 e Verifique a Verdade: verdadeiro · Lupa e UOL: subestimado</td><td><span class="selo imp">Impreciso</span></td><td>Eram cerca de 8,6 mil: mesmo critério de número errado usado para Flávio</td></tr>
+              <tr><td>Lula: sem o PT, o mínimo seria R$ 900</td><td>Aos Fatos e Verifique a Verdade: verdadeiro · g1: não é bem assim</td><td><span class="selo fato">Fato</span></td><td>Cálculos pela inflação dão entre R$ 820 e R$ 852, até menos que o citado</td></tr>
+              <tr><td>Lula: Bolsonaro disse que vacina faria virar jacaré ou gay</td><td>Lupa e Aos Fatos: verdadeiro · g1: não é bem assim</td><td><span class="selo imp">Impreciso</span></td><td>Bolsonaro falou em “jacaré”, mas não usou a palavra “gay”</td></tr>
+              <tr><td>Lula: gasto 30% maior no cartão corporativo de Bolsonaro</td><td>g1: falso · Ranking dos Políticos: impreciso</td><td><span class="selo fake">Fake</span></td><td>Nenhum recorte dos dados chega a 30%; as diferenças ficam entre 4% e 14%</td></tr>
+            </tbody>
+          </table></div>
+
+          <h3 id="m-veiculos">Por que o resultado difere dos veículos</h3>
+          <p>Nos veículos, a parcela de falas corretas de Flávio ficou entre 17% e 41%, e a de Lula entre 43% e 60%. Aqui a distância é menor, por três motivos:</p>
+          <ol>
+            <li><b>Amostra maior e menos seletiva.</b> Os veículos checaram entre 19 e 54 falas e priorizaram as mais polêmicas. Aqui entraram também afirmações rotineiras e corretas dos dois lados.</li>
+            <li><b>Mais falas de Lula checadas a fundo.</b> O Ranking dos Políticos detalhou 63 falas de Lula e 23 de Flávio, trazendo imprecisões de Lula que os outros não olharam.</li>
+            <li><b>Escala unificada.</b> “Enganoso” só virou Fake quando a afirmação estava de fato errada; com parte verdadeira, ficou como Impreciso. Isso afetou mais falas de Flávio.</li>
+          </ol>
+
+          <h3 id="limites">Limites e cuidados</h3>
+          <ul>
+            <li><b>Bloco 4 incompleto:</b> tema livre e considerações finais vieram só do que os checadores publicaram.</li>
+            <li id="lim-fonte"></li>
+            <li id="lim-div"></li>
+            <li id="lim-nv"></li>
+            <li><b>Placar não mede quem mente mais:</b> a contagem depende de quais falas cada um fez e de quão checáveis elas eram. Quem cita mais números se expõe a mais imprecisões.</li>
+            <li><b>Não é apuração profissional:</b> não houve contato com órgãos nem acesso a bases fechadas.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco alt" id="fontes">
+    <div class="wrap">
+      <div class="sec-cab"><h2>Fontes</h2></div>
+      <ul class="fontes">
+        <li><a href="https://www.poder360.com.br/poder-eleicoes-2026/leia-a-integra-do-ultimo-debate-entre-lula-e-flavio-na-globo/" target="_blank" rel="noopener">Transcrição do debate – Poder360</a></li>
+        <li><a href="https://g1.globo.com/fato-ou-fake/eleicoes/noticia/2026/10/23/veja-o-que-e-fato-ou-fake-nas-falas-de-flavio-bolsonaro-e-lula-no-debate-da-globo-no-2o-turno-das-eleicoes-2026.ghtml" target="_blank" rel="noopener">Fato ou Fake – g1</a></li>
+        <li><a href="https://www.agencialupa.org/checagem/2026/10/23/ao-vivo-checagem-do-ultimo-debate-entre-lula-e-flavio-bolsonaro-no-segundo-turno/" target="_blank" rel="noopener">Agência Lupa / Folha</a></li>
+        <li><a href="https://www.aosfatos.org/noticias/checamos-flavio-bolsonaro-lula-debate-globo/" target="_blank" rel="noopener">Aos Fatos</a></li>
+        <li><a href="https://www.terra.com.br/noticias/eleicoes/flavio-x-lula-na-globo-confira-a-checagem-sobre-as-declaracoes-do-ultimo-debate,0c0522294d9719e823d66bf9ef74f6f3v9zi67zf.html" target="_blank" rel="noopener">Terra / Aos Fatos</a></li>
+        <li><a href="https://pipocamoderna.com.br/2026/10/flavio-debate-globo-checagem/" target="_blank" rel="noopener">UOL Confere (repercussão)</a></li>
+        <li><a href="https://verifiqueaverdade.com.br/debates/globo-2026-10-23/" target="_blank" rel="noopener">Verifique a Verdade</a></li>
+        <li><a href="https://ranking.org.br/en/articles/checagem-debate-lula-flavio-bolsonaro-globo-2-turno-2026" target="_blank" rel="noopener">Ranking dos Políticos</a></li>
+        <li><a href="https://coletivobereia.com.br/checagens-do-debate-eleitoral-como-diferentes-veiculos-classificaram-as-falas-de-lula-e-flavio-bolsonaro/" target="_blank" rel="noopener">Coletivo Bereia – comparação entre veículos</a></li>
+        <li><a href="https://tvbrasil.ebc.com.br/reporter-brasil-tarde/2026/10/fim-da-escala-6x1-pec-e-promulgada-no-congresso" target="_blank" rel="noopener">Fim da escala 6x1 – TV Brasil</a></li>
+        <li><a href="https://www.cnnbrasil.com.br/eleicoes/governo-anuncia-proibicao-de-bets-e-endurecimento-a-mercado-ilegal/" target="_blank" rel="noopener">Proibição das bets – CNN Brasil</a></li>
+        <li><a href="https://www.gov.br/mj/pt-br/assuntos/noticias/presidente-lula-sanciona-lei-que-fortalece-o-combate-ao-crime-organizado" target="_blank" rel="noopener">Lei Antifacção – Ministério da Justiça</a></li>
+        <li><a href="https://www.aosfatos.org/noticias/falso-flavio-bolsonaro-disse-privatizar-sus-se-eleito-presidente/" target="_blank" rel="noopener">Privatização do SUS – Aos Fatos</a></li>
+        <li><a href="https://www.poder360.com.br/eleicoes/parte-do-agronegocio-e-fascista-e-direitista-diz-lula/" target="_blank" rel="noopener">Lula e o agro – Poder360</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Checagem consolidada do debate da TV Globo de 23/10/2026.</b> Elaborada a partir da transcrição do Poder360, das checagens de seis veículos e de dados oficiais, com o mesmo critério para os dois candidatos.</p>
+    <p>Os resumos das afirmações e das explicações são paráfrases. Para o texto completo de cada checagem, consulte as fontes.</p>
+  </div>
+</footer>
+
+<script id="dados" type="application/json">[{"id": "F01", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "Governo Bolsonaro recebeu cerca de 14 mil obras inacabadas em 2019 e entregou pouco mais de 8 mil", "selo": "Fato", "porque": "TCU contou 14.403 obras paralisadas em 2019 e 8.674 em agosto de 2022.", "fontes": "g1; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "F02", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "TCU aponta mais de 11,5 mil obras paralisadas no atual governo", "selo": "Impreciso", "porque": "Há levantamento do TCU com cerca de 11,5 mil, mas reúne obras de vários governos; o painel mais recente (abr/2026) mostra 4.215.", "fontes": "g1; Lupa; UOL; Aos Fatos; Verifique a Verdade", "checadores_divergem": "Sim"}, {"id": "F03", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "Bolsonaro criou o pedágio zero para motos nas concessões de rodovias", "selo": "Impreciso", "porque": "Portaria de 2021 existe, mas a isenção não vale para todas as concessões.", "fontes": "Aos Fatos/Terra; Verifique a Verdade", "checadores_divergem": "Sim"}, {"id": "F04", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "Governo Bolsonaro instalou 21,3 mil pontos de internet em 3,1 mil cidades, para 11 milhões de pessoas", "selo": "Impreciso", "porque": "O total confere, mas cerca de 11 mil pontos já existiam antes de 2019; o programa é de 2002.", "fontes": "g1; UOL; Aos Fatos; Verifique a Verdade", "checadores_divergem": "Sim"}, {"id": "F05", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Economia", "afirmacao": "O salário mínimo é de R$ 1.621", "selo": "Fato", "porque": "Valor fixado por decreto para 2026.", "fontes": "Ranking dos Políticos; g1", "checadores_divergem": "Não"}, {"id": "F06", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Economia", "afirmacao": "O atual governo tem a maior carga tributária da história", "selo": "Fato", "porque": "Dados do Tesouro mostram carga recorde no período recente.", "fontes": "Aos Fatos/Terra", "checadores_divergem": "Não"}, {"id": "F07", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Economia", "afirmacao": "O IVA da reforma tributária está estimado em 28%, o maior do mundo", "selo": "Fato", "porque": "Estimativas oficiais chegam a 28%, acima do maior IVA em vigor hoje (27%); o número ainda é estimativa.", "fontes": "Verifique a Verdade; Aos Fatos", "checadores_divergem": "Sim"}, {"id": "F08", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Social", "afirmacao": "Bolsonaro elevou o Bolsa Família para no mínimo R$ 600", "selo": "Impreciso", "porque": "Bolsonaro fixou R$ 400; o adicional de R$ 200 veio de emenda do Congresso, válida só até dez/2022.", "fontes": "g1; Lupa; UOL; Aos Fatos; Verifique a Verdade", "checadores_divergem": "Sim"}, {"id": "F09", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Social", "afirmacao": "Antes, o Bolsa Família pagava em média cerca de R$ 190", "selo": "Impreciso", "porque": "A média de R$ 189 é de 2021, já no governo Bolsonaro, e não de governos anteriores.", "fontes": "g1; Verifique a Verdade", "checadores_divergem": "Sim"}, {"id": "F10", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Economia", "afirmacao": "Pela inflação atual, ovos, sabão, chocolate e papel higiênico encolheram nas embalagens", "selo": "Impreciso", "porque": "A reduflação existe, mas é antiga; barras de 80 g já eram vendidas em 2022.", "fontes": "g1; Lupa; UOL; Verifique a Verdade", "checadores_divergem": "Sim"}, {"id": "F11", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Economia", "afirmacao": "O Brasil tem uma das maiores taxas de juros do mundo", "selo": "Fato", "porque": "Maior juro real do mundo e quarto maior juro nominal em setembro.", "fontes": "g1; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "F12", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Agro", "afirmacao": "Lula chama o agro de fascista", "selo": "Impreciso", "porque": "Em 2022 Lula disse que parte do agronegócio era fascista e direitista, não o setor todo.", "fontes": "Poder360; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "F13", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Agro", "afirmacao": "O Centro-Oeste é a região que mais produz alimentos", "selo": "Fato", "porque": "A região tem o maior valor bruto da produção agropecuária.", "fontes": "Lupa", "checadores_divergem": "Não"}, {"id": "F14", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Agro", "afirmacao": "O juro real do crédito rural chega perto de 20%", "selo": "Fake", "porque": "As taxas do Plano Safra vão de 8% a 12,5%; o juro real máximo fica perto de 8%.", "fontes": "Lupa; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "F15", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Argentina", "afirmacao": "Milei começou com inflação de 211% e juros de 100%", "selo": "Fato", "porque": "Dados do INDEC e do Banco Central argentino de dez/2023.", "fontes": "g1; UOL; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "F16", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Argentina", "afirmacao": "A esquerda governou a Argentina por 20 anos", "selo": "Impreciso", "porque": "Foram cerca de 16 anos de governos peronistas, não 20 seguidos.", "fontes": "Aos Fatos; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "F17", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Economia", "afirmacao": "Lula gastou mais de R$ 400 bilhões para tentar se reeleger", "selo": "Impreciso", "porque": "O valor vem de um levantamento de jornal; outras estimativas vão de R$ 270 bi a R$ 354 bi e incluem crédito.", "fontes": "g1; Lupa; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "F18", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Rio Grande do Sul", "afirmacao": "O governo entregou menos de 30% do que prometeu ao RS", "selo": "Fake", "porque": "Pagamentos chegaram a algo entre 43% e 61%, conforme a fonte; o TCU registra R$ 42,7 bi autorizados.", "fontes": "UOL; Verifique a Verdade; Aos Fatos", "checadores_divergem": "Sim"}, {"id": "F19", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Saneamento", "afirmacao": "90 milhões não têm esgoto tratado e 40 milhões não têm água tratada", "selo": "Impreciso", "porque": "90 milhões é o número sem coleta de esgoto; sem água potável são cerca de 33 milhões.", "fontes": "g1; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "F20", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Saneamento", "afirmacao": "O governo Bolsonaro fez o marco do saneamento e o PT votou contra", "selo": "Fato", "porque": "Lei de 2020, proposta pelo Executivo; o PT votou contra na Câmara e no Senado.", "fontes": "g1; Lupa; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "F21", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Saneamento", "afirmacao": "O atual governo adiou a meta do saneamento para depois de 2050", "selo": "Fake", "porque": "A meta legal continua sendo 2033.", "fontes": "Aos Fatos/Terra; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "F22", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "Bolsonaro concluiu a transposição do São Francisco que Lula prometeu para 2009 e 2014", "selo": "Impreciso", "porque": "A água chegou à Paraíba em 2017, com Temer; Bolsonaro concluiu etapas do Eixo Norte e ramais seguem em obra.", "fontes": "g1; Lupa; UOL; Aos Fatos; Verifique a Verdade", "checadores_divergem": "Sim"}, {"id": "F23", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Segurança", "afirmacao": "Os estados do Nordeste governados pelo PT e aliados são os mais violentos", "selo": "Fato", "porque": "As dez cidades com mais mortes violentas estão no Nordeste, oito em estados do PT.", "fontes": "g1; Verifique a Verdade; Aos Fatos", "checadores_divergem": "Sim"}, {"id": "F24", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 1", "tema": "Saúde", "afirmacao": "Bolsonaro não debochou de quem tinha falta de ar; o vídeo estava fora de contexto e não havia vacina", "selo": "Fake", "porque": "O vídeo mostrado cortou 30 segundos da live de 2021, e a vacinação já tinha começado.", "fontes": "g1; Lupa; Aos Fatos/Terra; Verifique a Verdade", "checadores_divergem": "Sim"}, {"id": "F25", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Social", "afirmacao": "Moradores de rua no CadÚnico quase dobraram, a partir de 199 mil", "selo": "Fato", "porque": "O cadastro passou de cerca de 199 mil para quase 400 mil.", "fontes": "Aos Fatos; Verifique a Verdade; Ranking dos Políticos; Lupa", "checadores_divergem": "Sim"}, {"id": "F26", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Social", "afirmacao": "O Bolsa Família teve reajuste de cerca de R$ 3 por dia às vésperas da eleição", "selo": "Fato", "porque": "O piso subiu R$ 91 por mês em setembro, primeira correção desde 2023.", "fontes": "Aos Fatos/Terra; Verifique a Verdade; g1", "checadores_divergem": "Não"}, {"id": "F27", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Economia", "afirmacao": "Mais de 80 milhões de brasileiros estão com contas atrasadas", "selo": "Fato", "porque": "A Serasa registrou 83,9 milhões de inadimplentes em agosto.", "fontes": "g1; Lupa; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "F28", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Mulheres", "afirmacao": "Há recorde de mulheres assassinadas no governo Lula", "selo": "Impreciso", "porque": "Os feminicídios bateram recorde em 2025, mas o total de homicídios de mulheres caiu.", "fontes": "Aos Fatos; Verifique a Verdade; Ranking dos Políticos", "checadores_divergem": "Sim"}, {"id": "F29", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Economia", "afirmacao": "Arroz, feijão e carne estão mais caros no governo Lula", "selo": "Não verificável", "porque": "Depende do período comparado; nenhum checador avaliou e os preços oscilaram em direções diferentes.", "fontes": "—", "checadores_divergem": "Não"}, {"id": "F30", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Segurança", "afirmacao": "Tarcísio, Nunes e Derrite acabaram com a Cracolândia", "selo": "Impreciso", "porque": "A concentração no centro foi desfeita, mas há dispersão de usuários pela cidade.", "fontes": "UOL; Aos Fatos; Verifique a Verdade; Ranking dos Políticos", "checadores_divergem": "Sim"}, {"id": "F31", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Animais", "afirmacao": "O governo Bolsonaro sancionou a Lei Sansão contra maus-tratos a animais", "selo": "Fato", "porque": "Lei 14.064/2020.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "F32", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Animais", "afirmacao": "O FBI associa maus-tratos a animais a maior potencial de violência", "selo": "Fato", "porque": "O FBI passou a tratar crueldade animal como crime grave em 2016 por essa associação.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "F33", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Economia", "afirmacao": "O governo deixa uma dívida de R$ 11 trilhões", "selo": "Fato", "porque": "A dívida bruta do governo geral chegou a R$ 11,1 tri em agosto (inclui estados e municípios).", "fontes": "g1; Lupa; UOL; Aos Fatos", "checadores_divergem": "Não"}, {"id": "F34", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Economia", "afirmacao": "A Selic está em torno de 14%", "selo": "Fato", "porque": "A taxa está em 13,75%.", "fontes": "Lupa", "checadores_divergem": "Não"}, {"id": "F35", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Economia", "afirmacao": "O Banco Central independente é legado do governo Bolsonaro", "selo": "Fato", "porque": "A lei de autonomia foi sancionada por Bolsonaro em 2021.", "fontes": "Lei Complementar 179/2021", "checadores_divergem": "Não"}, {"id": "F36", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Economia", "afirmacao": "Em 2022, a previsão era juros de 7% hoje; estão em 14%", "selo": "Impreciso", "porque": "As projeções de 2022 não iam até 2026 e eram expectativas de mercado.", "fontes": "g1; Lupa", "checadores_divergem": "Não"}, {"id": "F37", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Economia", "afirmacao": "O país paga quase R$ 1 trilhão por ano em juros da dívida", "selo": "Não verificável", "porque": "Não encontramos o dado consolidado mais recente para confirmar o valor.", "fontes": "—", "checadores_divergem": "Não"}, {"id": "F38", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Economia", "afirmacao": "Após o 1º turno os juros futuros caíram 2%, abrindo mais de R$ 200 bi", "selo": "Não verificável", "porque": "Não há fonte pública que sustente o cálculo citado.", "fontes": "—", "checadores_divergem": "Não"}, {"id": "F39", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Saúde", "afirmacao": "A espera por cirurgia de câncer de tireoide passou de 700 dias", "selo": "Fato", "porque": "O TCU apontou média de 719 dias em 2025.", "fontes": "g1; Lupa; Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "F40", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Saúde", "afirmacao": "Falta dipirona nas unidades básicas de saúde", "selo": "Não verificável", "porque": "Não há levantamento nacional de 2026; a compra é responsabilidade municipal.", "fontes": "Lupa", "checadores_divergem": "Não"}, {"id": "F41", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Saúde", "afirmacao": "A tabela SUS paga R$ 10 por consulta médica", "selo": "Fato", "porque": "Valor citado pelo CFM, sem correção há anos.", "fontes": "Ranking dos Políticos; CFM", "checadores_divergem": "Não"}, {"id": "F42", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Saúde", "afirmacao": "Um parto feito por obstetra é pago com R$ 443 pelo SUS", "selo": "Não verificável", "porque": "Não localizamos o valor na tabela consultada.", "fontes": "—", "checadores_divergem": "Não"}, {"id": "F43", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Saúde", "afirmacao": "Lula não atualizou a tabela SUS", "selo": "Fake", "porque": "Lei de 2024 criou revisão anual, com reajustes em dez/2024 e dez/2025.", "fontes": "g1", "checadores_divergem": "Não"}, {"id": "F44", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Saúde", "afirmacao": "A Caixa é a principal credora das Santas Casas e o governo não ajudou", "selo": "Impreciso", "porque": "O governo abriu linhas da Caixa e do FGTS, mas voltadas a investimento, não à dívida.", "fontes": "Aos Fatos; Ranking dos Políticos", "checadores_divergem": "Sim"}, {"id": "F45", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Economia", "afirmacao": "Lula criou ou aumentou mais de 30 impostos", "selo": "Impreciso", "porque": "A conta inclui medidas que não são impostos, como a reoneração da folha.", "fontes": "Aos Fatos", "checadores_divergem": "Não"}, {"id": "F46", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Saúde", "afirmacao": "Lula votou contra a Constituição de 1988, que criou o SUS", "selo": "Fato", "porque": "Registro da Constituinte; o PT votou contra mas assinou o texto.", "fontes": "g1; Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "F47", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Saúde", "afirmacao": "O SUS salvou Bolsonaro após a facada, na Santa Casa de Juiz de Fora", "selo": "Fato", "porque": "Bolsonaro foi atendido e operado na Santa Casa de Juiz de Fora em 2018.", "fontes": "Registro histórico", "checadores_divergem": "Não"}, {"id": "F48", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 2", "tema": "Saúde", "afirmacao": "Tarcísio criou a Tabela SUS Paulista", "selo": "Fato", "porque": "Tabela estadual em vigor desde 2024.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "F49", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 3", "tema": "Economia", "afirmacao": "Lula disse \"se a comida está cara, não compra\"", "selo": "Impreciso", "porque": "Lula sugeriu não comprar o que parecer caro para pressionar preços; a frase foi simplificada.", "fontes": "g1; Aos Fatos", "checadores_divergem": "Sim"}, {"id": "F50", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 3", "tema": "Economia", "afirmacao": "A Caixa tem mais de 11 milhões de contratos imobiliários, com mais de 30 milhões de pessoas", "selo": "Não verificável", "porque": "Não encontramos dado público com esses números.", "fontes": "—", "checadores_divergem": "Não"}, {"id": "F51", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 3", "tema": "Educação", "afirmacao": "O governo zerou o orçamento do ensino integral", "selo": "Impreciso", "porque": "Cerca de R$ 686 milhões foram remanejados, não zerados.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "F52", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 3", "tema": "Apostas", "afirmacao": "Lula é o \"pai do Tigrinho\": criou e liberou o cassino on-line", "selo": "Impreciso", "porque": "As apostas foram criadas em 2018, com Temer; a lei de 2023 sancionada por Lula regulamentou e incluiu os jogos on-line.", "fontes": "g1; Lupa; UOL; Aos Fatos; Ranking dos Políticos", "checadores_divergem": "Sim"}, {"id": "F53", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 3", "tema": "Educação", "afirmacao": "Bolsonaro anistiou quase 99% das dívidas do Fies e deu reajuste recorde de 33% aos professores", "selo": "Impreciso", "porque": "99% era o desconto máximo para parte dos devedores; o reajuste seguiu a lei do piso de 2008.", "fontes": "g1; Lupa", "checadores_divergem": "Não"}, {"id": "F54", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 3", "tema": "Educação", "afirmacao": "Mais de 1 milhão de crianças estão sem vaga em creche", "selo": "Impreciso", "porque": "Levantamento aponta 826 mil na fila de espera; outras estimativas de demanda passam de 2 milhões.", "fontes": "Levantamentos de imprensa", "checadores_divergem": "Não"}, {"id": "F55", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 3", "tema": "Educação", "afirmacao": "A nota do Brasil no Pisa está entre as piores da história no atual governo", "selo": "Fake", "porque": "O último Pisa foi aplicado em 2022, ainda no governo Bolsonaro.", "fontes": "Aos Fatos; Ranking dos Políticos", "checadores_divergem": "Sim"}, {"id": "F56", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 3", "tema": "Segurança", "afirmacao": "Lula é a favor de manter as saidinhas", "selo": "Fato", "porque": "Lula vetou o fim da saída temporária para visita à família; o veto foi derrubado em 2024.", "fontes": "g1; Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "F57", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 3", "tema": "Segurança", "afirmacao": "Um sargento da PM de Minas foi morto por um preso que não voltou da saidinha", "selo": "Fato", "porque": "Caso do sargento Roger Dias, em Belo Horizonte, em 2024.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "F58", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 3", "tema": "Segurança", "afirmacao": "Lula é contra reduzir a maioridade penal", "selo": "Impreciso", "porque": "Lula passou a defender a redução para crimes hediondos em out/2026.", "fontes": "Lupa; Ranking dos Políticos", "checadores_divergem": "Sim"}, {"id": "F59", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 3", "tema": "Segurança", "afirmacao": "Lula é contra classificar CV e PCC como terroristas", "selo": "Fato", "porque": "O governo rejeita publicamente essa classificação.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "F60", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 3", "tema": "Segurança", "afirmacao": "No caso Ana Clara houve troca de tiros e não foi o policial réu quem atirou", "selo": "Fake", "porque": "Investigação, perícia e testemunhas contrariam a versão de confronto; o policial aguarda júri.", "fontes": "g1; Lupa; Aos Fatos", "checadores_divergem": "Sim"}, {"id": "F61", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 3", "tema": "Segurança", "afirmacao": "A Lei Antifacção já começou a ser aplicada", "selo": "Fato", "porque": "A lei foi sancionada em março de 2026 e está em vigor.", "fontes": "Ministério da Justiça", "checadores_divergem": "Não"}, {"id": "F62", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 3", "tema": "Segurança", "afirmacao": "Chefes de facção podem pegar até 80 anos de prisão", "selo": "Impreciso", "porque": "As penas somadas podem ser altas, mas o cumprimento efetivo é limitado a 40 anos.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "F63", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 3", "tema": "Segurança", "afirmacao": "A audiência de custódia foi criada pelo CNJ sob Lewandowski", "selo": "Fato", "porque": "Resolução do CNJ de 2015, no governo Dilma.", "fontes": "g1; Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "F64", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 4", "tema": "Mulheres", "afirmacao": "São Paulo já monitora agressores de mulheres com alertas pelo celular", "selo": "Fato", "porque": "O estado usa tornozeleiras em agressores com alerta no celular da vítima.", "fontes": "Poder360; TecMundo", "checadores_divergem": "Não"}, {"id": "F65", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 4", "tema": "Mulheres", "afirmacao": "Vai criar a Casa da Mulher Brasileira", "selo": "Fake", "porque": "O programa já existe desde 2015, com 13 unidades.", "fontes": "g1; Lupa; Aos Fatos", "checadores_divergem": "Não"}, {"id": "F66", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 4", "tema": "Segurança", "afirmacao": "O governo diz que ladrão de celular não deve ser preso porque rouba para tomar cervejinha", "selo": "Fake", "porque": "Frase montada a partir de trechos distintos de uma entrevista de 2017.", "fontes": "g1; Lupa; Aos Fatos; Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "F67", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 4", "tema": "Segurança", "afirmacao": "O projeto que acaba com a marcação de munições não tem a ver com ele nem com a Câmara", "selo": "Impreciso", "porque": "O PL foi aprovado na Câmara e Flávio defendeu votá-lo no Senado.", "fontes": "g1", "checadores_divergem": "Não"}, {"id": "F68", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 4", "tema": "Política", "afirmacao": "Willer Tomaz é amigo, não sócio; o sócio dele é advogado ligado a Lula", "selo": "Impreciso", "porque": "Tomaz é sócio de Eugênio Aragão, mas a PF apura participação de fato de Flávio em empresa dele.", "fontes": "g1", "checadores_divergem": "Não"}, {"id": "F69", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 4", "tema": "Política", "afirmacao": "Lula disse que não conhecia Roberta Luchsinger", "selo": "Fato", "porque": "Lula negou conhecê-la; fotos nas redes da empresária mostram os dois juntos.", "fontes": "g1", "checadores_divergem": "Não"}, {"id": "F70", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 4", "tema": "Política", "afirmacao": "A PF mostrou que o filme Dark Horse não tem dinheiro público", "selo": "Fake", "porque": "A investigação sobre os repasses segue em andamento; a PF não concluiu isso.", "fontes": "Lupa; UOL; Aos Fatos", "checadores_divergem": "Não"}, {"id": "F71", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 4", "tema": "Política", "afirmacao": "Lula precisa explicar R$ 30 milhões de Vorcaro destinados a ele", "selo": "Fake", "porque": "Não há prova; PF e PGR negaram o depoimento citado.", "fontes": "Lupa; UOL", "checadores_divergem": "Não"}, {"id": "F72", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 4", "tema": "Política", "afirmacao": "Nunca foi investigado por envolvimento com milícia", "selo": "Impreciso", "porque": "Uma operação da PF apura emendas a entidades ligadas a milicianos.", "fontes": "Lupa", "checadores_divergem": "Não"}, {"id": "F73", "candidato": "Flávio Bolsonaro", "bloco": "Bloco 4", "tema": "Economia", "afirmacao": "Lula deixa o país quebrado", "selo": "Impreciso", "porque": "A dívida é alta e há déficit, mas PIB cresce e desemprego caiu.", "fontes": "Lupa", "checadores_divergem": "Não"}, {"id": "L01", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "Nunca se investiu tanto em infraestrutura", "selo": "Impreciso", "porque": "É recorde em valores absolutos, mas não como parcela do PIB.", "fontes": "Aos Fatos; Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L02", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "Novo PAC de R$ 1,7 trilhão, com quase R$ 800 bilhões executados", "selo": "Fato", "porque": "O balanço oficial mostra execução até maior; a maior parte é privada.", "fontes": "g1; Verifique a Verdade; Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L03", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "O governo Bolsonaro fez três ou quatro vezes menos infraestrutura", "selo": "Impreciso", "porque": "O investimento cresceu, mas não três ou quatro vezes.", "fontes": "Aos Fatos", "checadores_divergem": "Não"}, {"id": "L04", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "Herdou 6 mil obras paradas", "selo": "Impreciso", "porque": "O TCU registrava cerca de 8,6 mil em 2023: o número foi subestimado.", "fontes": "g1; Lupa; UOL; Aos Fatos; Verifique a Verdade", "checadores_divergem": "Sim"}, {"id": "L05", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "Está fazendo a BR-319, que ninguém teve coragem de fazer", "selo": "Impreciso", "porque": "A rodovia é de 1976; há obras de recuperação e o trecho do meio não tem licença.", "fontes": "g1; Lupa; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "L06", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "A obra da Serra das Araras custa quase R$ 12 bilhões", "selo": "Fake", "porque": "A obra é da concessionária e custa cerca de R$ 1,2 a 1,5 bilhão.", "fontes": "Verifique a Verdade; Ranking dos Políticos", "checadores_divergem": "Sim"}, {"id": "L07", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "O túnel Santos-Guarujá é pago pelo governo federal", "selo": "Impreciso", "porque": "A União entra com parte; o estado de SP e a concessionária também financiam.", "fontes": "Aos Fatos/Terra; Verifique a Verdade", "checadores_divergem": "Sim"}, {"id": "L08", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "O contorno de Florianópolis está em obras", "selo": "Impreciso", "porque": "A obra foi inaugurada em 2024.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L09", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "A Transnordestina está em obras", "selo": "Fato", "porque": "Obras em execução com recursos federais.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L10", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "A transposição está quase concluída e foi tentada desde o Império", "selo": "Fato", "porque": "Os eixos principais funcionam e ramais seguem em obra; a ideia é do século 19.", "fontes": "Ranking dos Políticos; g1", "checadores_divergem": "Não"}, {"id": "L11", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "A transposição é a maior obra hídrica em funcionamento do mundo", "selo": "Fake", "porque": "O projeto chinês Sul-Norte é maior.", "fontes": "Verifique a Verdade; Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L12", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Infraestrutura", "afirmacao": "A transposição tem 1.700 km de canais e 15 mil km de adutoras", "selo": "Fake", "porque": "Os eixos somam 477 km (cerca de 700 com ramais); não há registro de 15 mil km.", "fontes": "Verifique a Verdade; Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L13", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Economia", "afirmacao": "Sem os governos do PT, o salário mínimo seria R$ 900", "selo": "Fato", "porque": "Estimativas pela inflação dão entre R$ 820 e R$ 852, ainda menos que o citado.", "fontes": "Aos Fatos; Verifique a Verdade; g1; Ranking dos Políticos", "checadores_divergem": "Sim"}, {"id": "L14", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Economia", "afirmacao": "O salário mínimo chegou a R$ 1.600", "selo": "Fato", "porque": "O valor de 2026 é R$ 1.621.", "fontes": "g1", "checadores_divergem": "Não"}, {"id": "L15", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Economia", "afirmacao": "Temer e Bolsonaro não deram aumento do mínimo acima da inflação", "selo": "Impreciso", "porque": "Temer ficou abaixo da inflação; Bolsonaro deu ganho real em 2019.", "fontes": "g1", "checadores_divergem": "Não"}, {"id": "L16", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Trabalho", "afirmacao": "O fim da escala 6x1 foi aprovado", "selo": "Fato", "porque": "A emenda constitucional foi promulgada em outubro de 2026.", "fontes": "Verifique a Verdade; Ranking dos Políticos; TV Brasil", "checadores_divergem": "Não"}, {"id": "L17", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Agro", "afirmacao": "Abriu 700 novos mercados para o agro", "selo": "Fato", "porque": "O Ministério da Agricultura registra cerca de 700 aberturas desde 2023.", "fontes": "g1; Lupa; Aos Fatos; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "L18", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Economia", "afirmacao": "O superávit comercial chegou a quase R$ 85 bilhões", "selo": "Impreciso", "porque": "O valor é em dólares e é uma projeção para 2026.", "fontes": "g1; Lupa; Verifique a Verdade", "checadores_divergem": "Sim"}, {"id": "L19", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Agro", "afirmacao": "O juro do crédito rural é subsidiado, não segue a Selic", "selo": "Fato", "porque": "As linhas do Plano Safra são equalizadas pelo Tesouro.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L20", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Social", "afirmacao": "Acabou com a fome em 2012", "selo": "Impreciso", "porque": "O Brasil só saiu do Mapa da Fome em 2014, no governo Dilma.", "fontes": "g1; Lupa; Ranking dos Políticos", "checadores_divergem": "Sim"}, {"id": "L21", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Social", "afirmacao": "Havia 33 milhões passando fome quando voltou", "selo": "Fato", "porque": "Pesquisa da Rede Penssan de 2022.", "fontes": "g1; Lupa; Aos Fatos", "checadores_divergem": "Não"}, {"id": "L22", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Previdência", "afirmacao": "O Sul tem proporcionalmente mais aposentados", "selo": "Fato", "porque": "O Rio Grande do Sul tem a maior proporção de aposentados.", "fontes": "Aos Fatos; Verifique a Verdade", "checadores_divergem": "Sim"}, {"id": "L23", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Argentina", "afirmacao": "A pobreza na Argentina de Milei chegou a 40%", "selo": "Impreciso", "porque": "Era 40% na posse, chegou a 53% e hoje está em 32%.", "fontes": "g1; Lupa; Aos Fatos; Verifique a Verdade", "checadores_divergem": "Sim"}, {"id": "L24", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Argentina", "afirmacao": "Argentinos estão comendo carne de burro", "selo": "Impreciso", "porque": "Há registros na Patagônia, mas é um fenômeno localizado.", "fontes": "g1; Ranking dos Políticos", "checadores_divergem": "Sim"}, {"id": "L25", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Argentina", "afirmacao": "Flávio disse querer um modelo igual ao de Milei", "selo": "Não verificável", "porque": "Não encontramos registro conclusivo da declaração.", "fontes": "—", "checadores_divergem": "Não"}, {"id": "L26", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Economia", "afirmacao": "O economista de Flávio disse que vai mexer no salário mínimo", "selo": "Fake", "porque": "Ele disse que talvez não fosse preciso mudar a regra.", "fontes": "Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "L27", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Meio ambiente", "afirmacao": "O ministro de Bolsonaro defendia abrir a porteira para a destruição", "selo": "Fato", "porque": "Fala de Ricardo Salles na reunião ministerial de abril de 2020.", "fontes": "Aos Fatos; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "L28", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Meio ambiente", "afirmacao": "O governo anterior anulou o Fundo Amazônia e o atual o reativou", "selo": "Fato", "porque": "Paralisado em 2019; reativado após decisão do STF e decreto de 2023.", "fontes": "g1; Verifique a Verdade; Aos Fatos", "checadores_divergem": "Sim"}, {"id": "L29", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Social", "afirmacao": "Em 2003 o Nordeste era o mais pobre, desnutrido, analfabeto e com menos universidades e doutores", "selo": "Impreciso", "porque": "Era o mais pobre e analfabeto, mas não o mais desnutrido nem o com menos universidades.", "fontes": "g1; Aos Fatos/Terra; Verifique a Verdade", "checadores_divergem": "Sim"}, {"id": "L30", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Ciência", "afirmacao": "Levou supercomputador a Natal e computadores quânticos à Paraíba", "selo": "Impreciso", "porque": "Os projetos foram anunciados, mas ainda estão em implantação.", "fontes": "Aos Fatos; Verifique a Verdade; Ranking dos Políticos", "checadores_divergem": "Sim"}, {"id": "L31", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Educação", "afirmacao": "Criou 40 novos institutos federais e universidades", "selo": "Impreciso", "porque": "Os campi foram anunciados e estão em obras, sem entrega.", "fontes": "Verifique a Verdade; Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L32", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Indústria", "afirmacao": "Levou montadoras para Pernambuco e Bahia", "selo": "Fato", "porque": "Fábricas instaladas em governos do PT (PE em 2015, BA mais recente).", "fontes": "Verifique a Verdade; Ranking dos Políticos", "checadores_divergem": "Sim"}, {"id": "L33", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Educação", "afirmacao": "Levou o ITA para o Ceará, estado que mais aprova no ITA", "selo": "Fato", "porque": "Campus no Ceará; o estado lidera aprovações.", "fontes": "Aos Fatos/Terra; Ranking dos Políticos; Verifique a Verdade", "checadores_divergem": "Sim"}, {"id": "L34", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Saúde", "afirmacao": "Fez 14 novos hospitais no Nordeste", "selo": "Não verificável", "porque": "Não há contagem oficial.", "fontes": "Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "L35", "candidato": "Lula", "bloco": "Bloco 1", "tema": "Saúde", "afirmacao": "Bolsonaro imitou uma pessoa com falta de ar", "selo": "Fato", "porque": "A imitação está em lives de 2021, em críticas a Mandetta.", "fontes": "Aos Fatos; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "L36", "candidato": "Lula", "bloco": "Bloco 2", "tema": "Social", "afirmacao": "Flávio foi o único deputado estadual do RJ contra ampliar a licença-maternidade", "selo": "Fato", "porque": "Votação de 2009 na Alerj: 45 a 1 e 54 a 1.", "fontes": "g1; Aos Fatos; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "L37", "candidato": "Lula", "bloco": "Bloco 2", "tema": "Social", "afirmacao": "Flávio chamou o Bolsa Família de \"Bolsa Farelo\"", "selo": "Fato", "porque": "Expressão usada em posts de 2013, depois apagados.", "fontes": "g1; Lupa; Aos Fatos", "checadores_divergem": "Não"}, {"id": "L38", "candidato": "Lula", "bloco": "Bloco 2", "tema": "Biografia", "afirmacao": "Perdeu um dedo aos 17 anos trabalhando à noite", "selo": "Impreciso", "porque": "Biografias apontam entre 18 e 19 anos.", "fontes": "Verifique a Verdade; Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L39", "candidato": "Lula", "bloco": "Bloco 2", "tema": "Política", "afirmacao": "O primeiro emprego de Flávio foi um vínculo falso dado pelo pai", "selo": "Fake", "porque": "Não há registro dessa nomeação.", "fontes": "Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "L40", "candidato": "Lula", "bloco": "Bloco 2", "tema": "Trabalho", "afirmacao": "1 milhão de trabalhadores se acidentam por irresponsabilidade patronal", "selo": "Impreciso", "porque": "Foram cerca de 806 mil acidentes em 2025.", "fontes": "g1; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "L41", "candidato": "Lula", "bloco": "Bloco 2", "tema": "Política", "afirmacao": "Flávio o chamou de \"nove dedos\"", "selo": "Fato", "porque": "Flávio usou a expressão e pediu desculpas no próprio debate.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L42", "candidato": "Lula", "bloco": "Bloco 2", "tema": "Educação", "afirmacao": "A primeira universidade do país surgiu 420 anos depois do descobrimento", "selo": "Fato", "porque": "A UFRJ, de 1920, é considerada a primeira.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L43", "candidato": "Lula", "bloco": "Bloco 2", "tema": "Economia", "afirmacao": "Flávio copia a proposta de compra de dívidas que o governo já enviou", "selo": "Fato", "porque": "A MP do Desenrola 3.0 foi enviada em setembro.", "fontes": "g1; Lupa", "checadores_divergem": "Não"}, {"id": "L44", "candidato": "Lula", "bloco": "Bloco 2", "tema": "Economia", "afirmacao": "A compra de dívidas com deságio de 90% a 95% já foi feita", "selo": "Impreciso", "porque": "A MP tramita e o leilão ainda não ocorreu.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L45", "candidato": "Lula", "bloco": "Bloco 2", "tema": "Economia", "afirmacao": "Herdou juros de 13% e hoje estão em 13,75%", "selo": "Impreciso", "porque": "Herdou 13,75%; a taxa chegou a 15% antes de voltar a 13,75%.", "fontes": "g1", "checadores_divergem": "Não"}, {"id": "L46", "candidato": "Lula", "bloco": "Bloco 2", "tema": "Economia", "afirmacao": "Manteve o presidente do BC por 8 anos; FHC trocou quatro vezes", "selo": "Fato", "porque": "Meirelles ficou de 2003 a 2011; FHC nomeou quatro.", "fontes": "g1", "checadores_divergem": "Não"}, {"id": "L47", "candidato": "Lula", "bloco": "Bloco 2", "tema": "Economia", "afirmacao": "A economia não crescia acima de 3% desde 2010", "selo": "Fake", "porque": "O PIB cresceu mais de 3% em 2011, 2013 e 2021.", "fontes": "g1; Lupa; UOL; Aos Fatos", "checadores_divergem": "Não"}, {"id": "L48", "candidato": "Lula", "bloco": "Bloco 2", "tema": "Saúde", "afirmacao": "O governo Bolsonaro deixou morrer 726 mil pessoas de covid", "selo": "Impreciso", "porque": "Ao fim de 2022 eram cerca de 693 mil mortes; o número citado é maior.", "fontes": "Painel do Ministério da Saúde", "checadores_divergem": "Não"}, {"id": "L49", "candidato": "Lula", "bloco": "Bloco 2", "tema": "Saúde", "afirmacao": "Bolsonaro disse que quem tomasse vacina viraria jacaré ou gay", "selo": "Impreciso", "porque": "Disse \"jacaré\" sobre a vacina da Pfizer, mas não usou a palavra \"gay\".", "fontes": "g1; Lupa; Aos Fatos", "checadores_divergem": "Sim"}, {"id": "L50", "candidato": "Lula", "bloco": "Bloco 2", "tema": "Saúde", "afirmacao": "Flávio afirmou que pretende privatizar o SUS", "selo": "Fake", "porque": "Flávio não disse isso; a afirmação já havia sido desmentida.", "fontes": "Aos Fatos", "checadores_divergem": "Não"}, {"id": "L51", "candidato": "Lula", "bloco": "Bloco 3", "tema": "Economia", "afirmacao": "O 1º Desenrola atendeu 15 milhões e o 2º quase 16 milhões", "selo": "Impreciso", "porque": "O primeiro confere (15,06 mi); o segundo número não foi confirmado.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L52", "candidato": "Lula", "bloco": "Bloco 3", "tema": "Economia", "afirmacao": "O leilão de dívidas pode passar de R$ 150 bilhões", "selo": "Fato", "porque": "O governo estima adquirir R$ 150 bi em dívidas.", "fontes": "g1", "checadores_divergem": "Não"}, {"id": "L53", "candidato": "Lula", "bloco": "Bloco 3", "tema": "Economia", "afirmacao": "Perdoou quase R$ 15 bi em dívidas de 4 milhões de MEIs", "selo": "Fato", "porque": "A lei perdoa R$ 12,6 bi de cerca de 3,6 milhões de MEIs.", "fontes": "g1; Lupa; Ranking dos Políticos", "checadores_divergem": "Sim"}, {"id": "L54", "candidato": "Lula", "bloco": "Bloco 3", "tema": "Economia", "afirmacao": "Ampliou o MEI para dois funcionários e teto de R$ 140 mil em 2028", "selo": "Fato", "porque": "A lei permite dois empregados e eleva o teto gradualmente.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L55", "candidato": "Lula", "bloco": "Bloco 3", "tema": "Economia", "afirmacao": "O Brasil tem 17,5 milhões de MEIs", "selo": "Fato", "porque": "Eram 17,16 milhões em junho de 2026.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L56", "candidato": "Lula", "bloco": "Bloco 3", "tema": "Economia", "afirmacao": "Criou a Lei Geral da Pequena e Média Empresa", "selo": "Fato", "porque": "Lei Complementar 123, de 2006.", "fontes": "Lupa", "checadores_divergem": "Não"}, {"id": "L57", "candidato": "Lula", "bloco": "Bloco 3", "tema": "Apostas", "afirmacao": "O governo acabou com as bets", "selo": "Fato", "porque": "MP de setembro de 2026 proíbe apostas on-line; ainda depende do Congresso.", "fontes": "Verifique a Verdade; Ranking dos Políticos; CNN Brasil", "checadores_divergem": "Não"}, {"id": "L58", "candidato": "Lula", "bloco": "Bloco 3", "tema": "Apostas", "afirmacao": "O Tigrinho foi criado pelo governo Bolsonaro em 2022", "selo": "Fake", "porque": "As apostas foram legalizadas em 2018, com Temer; os jogos on-line, pela lei de 2023.", "fontes": "g1; Lupa; UOL; Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L59", "candidato": "Lula", "bloco": "Bloco 3", "tema": "Educação", "afirmacao": "Encontrou 5,6 mil creches e escolas paralisadas em 2023", "selo": "Fato", "porque": "O FNDE registrou 5.642 obras paralisadas ou inacabadas.", "fontes": "g1; Aos Fatos; Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L60", "candidato": "Lula", "bloco": "Bloco 3", "tema": "Educação", "afirmacao": "O Pé-de-Meia fez 66% dos jovens não abandonarem a escola", "selo": "Impreciso", "porque": "O MEC aponta queda de 43% no abandono do ensino médio.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L61", "candidato": "Lula", "bloco": "Bloco 3", "tema": "Educação", "afirmacao": "O governo Bolsonaro inventou a escola cívico-militar sem executá-la", "selo": "Fake", "porque": "O programa chegou a 215 escolas.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L62", "candidato": "Lula", "bloco": "Bloco 3", "tema": "Segurança", "afirmacao": "O julgamento do policial do caso Ana Clara, previsto para o dia 21, não ocorreu", "selo": "Fato", "porque": "O júri foi adiado para maio de 2027.", "fontes": "g1", "checadores_divergem": "Não"}, {"id": "L63", "candidato": "Lula", "bloco": "Bloco 3", "tema": "Segurança", "afirmacao": "Flávio, como senador, defendeu o policial do caso Ana Clara", "selo": "Fato", "porque": "Flávio integrou a defesa em recurso ao STJ em 2024.", "fontes": "g1; Aos Fatos", "checadores_divergem": "Não"}, {"id": "L64", "candidato": "Lula", "bloco": "Bloco 3", "tema": "Segurança", "afirmacao": "Flávio condecorou milicianos na Alerj e empregou parentes de um deles", "selo": "Fato", "porque": "Homenageou Adriano da Nóbrega, cuja mãe e esposa trabalharam no gabinete.", "fontes": "g1; Aos Fatos; Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L65", "candidato": "Lula", "bloco": "Bloco 4", "tema": "Política", "afirmacao": "O governo Bolsonaro gastou quase 30% a mais no cartão corporativo", "selo": "Fake", "porque": "As comparações ficam entre 4% e 14%, conforme o recorte.", "fontes": "g1; Ranking dos Políticos", "checadores_divergem": "Sim"}, {"id": "L66", "candidato": "Lula", "bloco": "Bloco 4", "tema": "Saúde", "afirmacao": "A Covaxin nunca foi distribuída", "selo": "Fato", "porque": "A Anvisa barrou a vacina.", "fontes": "Aos Fatos", "checadores_divergem": "Não"}, {"id": "L67", "candidato": "Lula", "bloco": "Bloco 4", "tema": "Saúde", "afirmacao": "Flávio discutiu a Covaxin num barco em 2020", "selo": "Impreciso", "porque": "A reunião foi virtual; a ligação com a Precisa é documentada.", "fontes": "Ranking dos Políticos; Aos Fatos", "checadores_divergem": "Não"}, {"id": "L68", "candidato": "Lula", "bloco": "Bloco 4", "tema": "Economia", "afirmacao": "Nunca se exportou tanto no país", "selo": "Fato", "porque": "Recorde de US$ 348 bi em 2025.", "fontes": "g1; Lupa; Aos Fatos; Verifique a Verdade", "checadores_divergem": "Não"}, {"id": "L69", "candidato": "Lula", "bloco": "Bloco 4", "tema": "Apostas", "afirmacao": "Flávio é contra acabar com as bets", "selo": "Fato", "porque": "Flávio criticou a MP e defende apostas esportivas.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L70", "candidato": "Lula", "bloco": "Bloco 4", "tema": "Política", "afirmacao": "O banqueiro Daniel Vorcaro foi preso", "selo": "Fato", "porque": "Está preso preventivamente desde março de 2026.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L71", "candidato": "Lula", "bloco": "Bloco 4", "tema": "Política", "afirmacao": "Amigo de Flávio obteve título da SPU em uma semana", "selo": "Impreciso", "porque": "O processo ocorreu, mas não há registro de interferência de Flávio.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L72", "candidato": "Lula", "bloco": "Bloco 4", "tema": "Política", "afirmacao": "Flávio não entregou dados de sigilo ao TSE", "selo": "Impreciso", "porque": "Parte confirmada; outros detalhes citados não têm registro.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L73", "candidato": "Lula", "bloco": "Bloco 4", "tema": "Agro", "afirmacao": "Nenhum governo investiu tanto no agro e na agricultura familiar", "selo": "Fato", "porque": "O Plano Safra 2026/27 tem os maiores valores nominais da série.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L74", "candidato": "Lula", "bloco": "Bloco 4", "tema": "Previdência", "afirmacao": "26 milhões de aposentados recebem um salário mínimo", "selo": "Fato", "porque": "O dado oficial é até maior: 28,5 milhões.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L75", "candidato": "Lula", "bloco": "Bloco 4", "tema": "Saúde", "afirmacao": "O adversário inventou a cloroquina para vender", "selo": "Impreciso", "porque": "O remédio já existia; não há registro de lucro com a venda.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L76", "candidato": "Lula", "bloco": "Bloco 4", "tema": "Biografia", "afirmacao": "Percorreu 91 mil km de campanha em 1989", "selo": "Impreciso", "porque": "Registros apontam cerca de 30 mil km nas caravanas.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}, {"id": "L77", "candidato": "Lula", "bloco": "Bloco 4", "tema": "Economia", "afirmacao": "Criou o primeiro Desenrola no primeiro mês de governo", "selo": "Impreciso", "porque": "O programa foi criado em junho de 2023.", "fontes": "Ranking dos Políticos", "checadores_divergem": "Não"}]</script>
+<script>
+(() => {
+  const dados = JSON.parse(document.getElementById('dados').textContent);
+  const CANDS = [['Flávio Bolsonaro','Flávio Bolsonaro (PL)'],['Lula','Lula (PT)']];
+  const SELOS = [['Fato','fato'],['Impreciso','imp'],['Fake','fake'],['Não verificável','nv']];
+  const cls = Object.fromEntries(SELOS);
+  const pct = (a,b) => Math.round(a/b*100) + '%';
+  const fmt = n => n.toLocaleString('pt-BR');
+  const el = (tag, attrs = {}, txt) => { const e = document.createElement(tag); for (const [k,v] of Object.entries(attrs)) e.setAttribute(k, v); if (txt != null) e.textContent = txt; return e; };
+
+  const placar = Object.fromEntries(CANDS.map(([c]) => {
+    const rs = dados.filter(r => r.candidato === c);
+    const cont = Object.fromEntries(SELOS.map(([s]) => [s, rs.filter(r => r.selo === s).length]));
+    return [c, { total: rs.length, cont, div: rs.filter(r => r.checadores_divergem === 'Sim').length,
+      unica: rs.filter(r => r.fontes === 'Ranking dos Políticos' || r.fontes === 'Verifique a Verdade').length }];
+  }));
+  const F = placar['Flávio Bolsonaro'], L = placar['Lula'];
+
+  // textos com números vindos dos dados
+  document.getElementById('lead').innerHTML = '';
+  document.getElementById('lead').append(
+    'Reunimos ', el('b', {}, fmt(dados.length)), ' afirmações factuais do último debate antes do 2º turno — ',
+    el('b', {}, fmt(F.total)), ' de Flávio Bolsonaro e ', el('b', {}, fmt(L.total)),
+    ' de Lula — e checamos cada uma contra seis checadores e dados oficiais.');
+  document.getElementById('m-resultado-txt').textContent =
+    `Lula teve ${pct(L.cont['Fato'], L.total)} de afirmações corretas e ${pct(L.cont['Fake'], L.total)} falsas; Flávio, ${pct(F.cont['Fato'], F.total)} corretas e ${pct(F.cont['Fake'], F.total)} falsas. Nos dois, cerca de um terço foi impreciso.`;
+  document.getElementById('m-div-txt').textContent =
+    `Os veículos discordaram em ${F.div + L.div} das ${dados.length} afirmações (${F.div} de Flávio, ${L.div} de Lula). Nesses casos, decidiu-se pelo dado de fundo e pelo que a frase diz literalmente. Alguns exemplos:`;
+  const lim = (id, b, t) => { const li = document.getElementById(id); li.append(el('b', {}, b), ' ' + t); };
+  lim('lim-fonte', 'Fonte única em parte dos itens:', `${F.unica + L.unica} afirmações (${L.unica} de Lula, ${F.unica} de Flávio) se apoiam só no Ranking dos Políticos ou no Verifique a Verdade. O Ranking se descreve como posicionado.`);
+  lim('lim-div', 'Julgamento próprio:', `em ${F.div + L.div} casos os checadores discordaram e o selo final é uma escolha explicada acima.`);
+  lim('lim-nv', 'Sem dado público:', `${F.cont['Não verificável'] + L.cont['Não verificável']} afirmações ficaram como não verificáveis.`);
+
+  // faixas (assinatura)
+  const faixas = document.getElementById('faixas');
+  const tip = el('div', { class: 'tip', hidden: '' });
+  CANDS.forEach(([c, rot]) => {
+    const p = placar[c];
+    const wrap = el('div', { class: 'faixa-wrap' });
+    const cab = el('div', { class: 'faixa-cab' });
+    cab.append(el('h2', {}, rot), el('span', {}, `${p.total} afirmações`));
+    const faixa = el('div', { class: 'faixa', role: 'img', 'aria-label': `${rot}: ` + SELOS.map(([s]) => `${p.cont[s]} ${s}`).join(', ') });
+    SELOS.forEach(([s, k]) => {
+      const n = p.cont[s]; if (!n) return;
+      const seg = el('div', { class: `seg ${k}` });
+      seg.style.flex = `${n} 1 0`;
+      seg.append(el('span', { class: 'n' }, n), el('span', { class: 'p' }, `${s} · ${pct(n, p.total)}`));
+      seg.addEventListener('mousemove', ev => {
+        tip.textContent = `${rot} · ${s}: ${n} de ${p.total} (${pct(n, p.total)})`;
+        tip.hidden = false;
+        const box = faixas.getBoundingClientRect();
+        let x = ev.clientX - box.left + 14; const y = ev.clientY - box.top + 14;
+        if (x + tip.offsetWidth > box.width) x = ev.clientX - box.left - tip.offsetWidth - 14;
+        tip.style.left = x + 'px'; tip.style.top = y + 'px';
+      });
+      seg.addEventListener('mouseleave', () => { tip.hidden = true; });
+      faixa.append(seg);
+    });
+    wrap.append(cab, faixa); faixas.append(wrap);
+  });
+  faixas.style.position = 'relative'; faixas.append(tip);
+  const ajustar = () => faixas.querySelectorAll('.seg').forEach(s => { s.classList.toggle('tight', s.clientWidth < 40); s.classList.toggle('compact', s.clientWidth < 140); });
+  ajustar(); window.addEventListener('resize', ajustar);
+
+  // explorador
+  const estado = { cand: 'todos', selo: 'todos', bloco: '', div: false, q: '' };
+  const lista = document.getElementById('lista'), contagem = document.getElementById('contagem');
+  const sel = document.getElementById('f-bloco');
+  sel.append(new Option('Todos os blocos', ''), ...[...new Set(dados.map(r => r.bloco))].sort().map(b => new Option(b, b)));
+  const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+  function render() {
+    const q = norm(estado.q.trim());
+    const rs = dados.filter(r =>
+      (estado.cand === 'todos' || r.candidato === estado.cand) &&
+      (estado.selo === 'todos' || r.selo === estado.selo) &&
+      (!estado.bloco || r.bloco === estado.bloco) &&
+      (!estado.div || r.checadores_divergem === 'Sim') &&
+      (!q || norm([r.tema, r.afirmacao, r.porque, r.fontes, r.candidato].join(' ')).includes(q)));
+    contagem.textContent = rs.length === 1 ? '1 afirmação' : `${fmt(rs.length)} afirmações`;
+    lista.replaceChildren();
+    if (!rs.length) {
+      const v = el('div', { class: 'vazio' });
+      v.append(el('p', {}, 'Nenhuma afirmação com esses filtros.'));
+      const b = el('button', { class: 'chip', type: 'button' }, 'Limpar filtros');
+      b.addEventListener('click', limpar); v.append(b); lista.append(v); return;
+    }
+    const frag = document.createDocumentFragment();
+    rs.forEach(r => {
+      const k = cls[r.selo] || 'nv';
+      const it = el('article', { class: `item ${k}` });
+      const meta = el('div', { class: 'meta' });
+      meta.append(el('span', { class: 'cand' }, r.candidato), el('span', {}, r.bloco), el('span', {}, r.tema));
+      if (r.checadores_divergem === 'Sim') meta.append(el('span', { class: 'div' }, 'Checadores divergem'));
+      it.append(meta, el('p', { class: 'afirm' }, r.afirmacao), el('span', { class: `selo ${k}` }, r.selo),
+        el('p', { class: 'porque' }, r.porque), el('p', { class: 'apoio' }, 'Apoio: ' + r.fontes));
+      frag.append(it);
+    });
+    lista.append(frag);
+  }
+  function grupo(id, chave) {
+    const g = document.getElementById(id);
+    g.addEventListener('click', ev => {
+      const b = ev.target.closest('button[data-v]'); if (!b) return;
+      estado[chave] = b.dataset.v;
+      g.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+      render();
+    });
+  }
+  function limpar() {
+    Object.assign(estado, { cand: 'todos', selo: 'todos', bloco: '', div: false, q: '' });
+    document.querySelectorAll('#f-cand button, #f-selo button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v === 'todos')));
+    sel.value = ''; document.getElementById('f-div').checked = false; document.getElementById('f-q').value = '';
+    render();
+  }
+  grupo('f-cand', 'cand'); grupo('f-selo', 'selo');
+  sel.addEventListener('change', () => { estado.bloco = sel.value; render(); });
+  document.getElementById('f-div').addEventListener('change', e => { estado.div = e.target.checked; render(); });
+  document.getElementById('f-q').addEventListener('input', e => { estado.q = e.target.value; render(); });
+  render();
+})();
+</script>
+</body>
+</html>
